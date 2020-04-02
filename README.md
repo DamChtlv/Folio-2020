@@ -5,7 +5,7 @@ Personal portfolio project for 2020
 - **VueJS 2** `(Layouts, components, custom elements, events, navigation...)`
 - **NuxtJS** `(Auto-routing, server-side rendering...)`
 - **WordPress** `(Headless CMS)`
-- **WP Nuxt** `(WP Rest API node module wrapper)`
+- **WP Nuxt** `(WP REST API node module wrapper)`
 - **Netlify** `(Continuous Integration / Deployment)`
 - **Tailwind** `(CSS Framework)`
 - **GSAP** `(2D / 3D animations)`
