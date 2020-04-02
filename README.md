@@ -34,6 +34,7 @@ Personal portfolio project for 2020
 - [WP Headless](https://wordpress.org/plugins/wp-headless/) `(Remove WP frontend permalinks)`
 - [WP REST API Controller](https://fr.wordpress.org/plugins/wp-rest-api-controller/) `(Better replacement of Wuxt? 🤔)`
 - [WP REST API Taxos & Terms](https://wordpress.org/plugins/search/andrew-magik-rest-api/) `(Taxos & terms? 🤔)`
+- [WP2Static](https://wordpress.org/plugins/static-html-output-plugin/) `(Handle automatically html deploy? 🤔)`
 
 **Repos:**
 - [Headless WP Nuxt](https://github.com/netlify-labs/headless-wp-nuxt) `(Great "WP Headless + Nuxt" base)`
