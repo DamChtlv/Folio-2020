@@ -22,6 +22,7 @@ Personal portfolio project for 2020
 **Posts:**
 - [Creating a site with NuxtJS & WP REST API](https://medium.com/@moustachedesign/creating-a-website-with-nuxt-js-and-wordpress-rest-api-51cf66599cf3) `(Nice overall case study)`
 - [Nuxt + Headless WP challenges](https://medium.com/@chris.geelhoed/nuxt-and-headless-wordpress-motivations-and-challenges-3685f649e045)
+- [Nuxt + ACF + Gridsome](https://snipcart.com/blog/wordpress-vue-headless) `(Config using ACF + GraphQL (Gridsome) + PWA (VuePress))`
 
 **WP Headless Plugins:**
 - [Wuxt WP API Extension](https://wordpress.org/plugins/wuxt-headless-wp-api-extensions/) `(Overall fix for missing endpoints 🤔)`
