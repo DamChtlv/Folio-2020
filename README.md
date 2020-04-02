@@ -19,7 +19,7 @@ Personal portfolio project for 2020
 - [NuxtJS - Videos](https://vueschool.io/lessons/what-is-nuxtjs)
 
 **Posts:**
-- [Creating a site with NuxtJS & WP REST API](https://medium.com/@moustachedesign/creating-a-website-with-nuxt-js-and-wordpress-rest-api-51cf66599cf3)
+- [Creating a site with NuxtJS & WP REST API](https://medium.com/@moustachedesign/creating-a-website-with-nuxt-js-and-wordpress-rest-api-51cf66599cf3) `(Nice overall case study)`
 - [Nuxt + Headless WP challenges](https://medium.com/@chris.geelhoed/nuxt-and-headless-wordpress-motivations-and-challenges-3685f649e045)
 
 **WP Headless Plugins:**
