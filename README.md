@@ -7,6 +7,9 @@ Personal portfolio project for 2020
 - **WordPress** `(Headless CMS)`
 - **WP Nuxt** `(WP Rest API node module wrapper)`
 - **Netlify** `(Continuous Integration / Deployment)`
+- **Tailwind** `(CSS Framework)`
+- **GSAP** `(2D / 3D animations)`
+- **CurtainsJS** `(WebGL animations)`
 
 ## Infos / Inspirations / Tools
 **Learning:**
@@ -28,6 +31,7 @@ Personal portfolio project for 2020
 - [ACF to REST API](https://wordpress.org/plugins/acf-to-rest-api/) `(Add ACF metas to API endpoints)`
 - [WP Headless](https://wordpress.org/plugins/wp-headless/) `(Remove WP frontend permalinks)`
 - [WP REST API Controller](https://fr.wordpress.org/plugins/wp-rest-api-controller/) `(Better replacement of Wuxt? 🤔)`
+- [WP REST API Taxos & Terms](https://wordpress.org/plugins/search/andrew-magik-rest-api/) `(Taxos & terms? 🤔)`
 
 **Repos:**
 - [Headless WP Nuxt](https://github.com/netlify-labs/headless-wp-nuxt) `(Great "WP Headless + Nuxt" base)`
