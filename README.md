@@ -42,4 +42,4 @@ Personal portfolio project for 2020
 - [Headless WP Starter](https://github.com/postlight/headless-wp-starter) `(Big advanced React WP Headless starter 💡)`
 
 **Tools**
-- [Storybook JS](https://storybook.js.org/) `(To visualize & test vue components in an isolated environment)`
+- [Storybook JS](https://storybook.js.org/) `(To visualize & test Vue components in an isolated environment)`
