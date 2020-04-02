@@ -9,6 +9,12 @@ Personal portfolio project for 2020
 - **Netlify** `(Continuous Integration / Deployment)`
 
 ## Infos / Inspirations / Tools
+**Learning:**
+- [VueJS - Docs](https://fr.vuejs.org/v2/guide/)
+- [VueJS - Videos](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance)
+- [NuxtJS - Docs](https://fr.nuxtjs.org/guide#nuxt-js-qu-est-ce-que-c-est-)
+- [NuxtJS - Videos](https://vueschool.io/lessons/what-is-nuxtjs)
+
 **Posts:**
 - [Nuxt + Headless WP challenges](https://medium.com/@chris.geelhoed/nuxt-and-headless-wordpress-motivations-and-challenges-3685f649e045)
 
