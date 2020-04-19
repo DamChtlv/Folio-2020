@@ -17,7 +17,7 @@ Personal portfolio project for 2020
 <summary><strong>DEV</strong></summary>
   
 ## Stack
-- **VueJS 2** `(Layouts, components, custom elements, events, navigation...)`
+- **VueJS 2 (or 3?)** `(Layouts, components, custom elements, events, navigation...)`
 - **NuxtJS** `(Auto-routing, server-side rendering...)`
 - **WordPress** `(Headless CMS)`
 - **WP Nuxt** `(WP REST API node module wrapper)`
