@@ -13,6 +13,8 @@ Personal portfolio project for 2020
 - **[Victor Work](https://victor.work/)** `(Native Smooth scroll / Colors / WebGL image effects)`
 - **[Igor Mahr](https://igma.im/)** `(Micro-anims UI / Cursor deformation / Layout)`
 - **[Phoenix Cool](https://web.archive.org/web/20190619180926/https://phoenix.cool/)** `(Micro-anims UI / Easter Eggs ❤)`
+- **[Adrien Lamy](https://adrienlamy.fr/)** `(Humor-Derp Avatar / Easter Eggs ❤)`
+- **[Adrien Lamy's Lab](https://lab.adrienlamy.fr/)** `(Humor-Derp / Doggo Avatar / Easter Eggs ❤)`
 
 **Repos**
 - **[THREEJS Modern Starter](https://github.com/marcofugaro/threejs-modern-app)** `(🚀)`
