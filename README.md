@@ -1,6 +1,21 @@
 # Folio-2020
 Personal portfolio project for 2020
 
+<details>
+<summary><strong>DESIGN</strong></summary>
+
+
+**Inspiration:**
+- [Richard Mattka](http://richardmattka.com) `(Designer / Creative Dev / Real)`
+
+**Tools**
+- [Webdesign](https://www.figma.com/files/team/822163543758455023/Les-Pilotins)
+- [Design Moodboard](https://niice.co/boards/6a3770e03d503d221dbfe93f90b8475a)
+</details>
+
+<details>
+<summary><strong>DEV</strong></summary>
+  
 ## Stack
 - **VueJS 2** `(Layouts, components, custom elements, events, navigation...)`
 - **NuxtJS** `(Auto-routing, server-side rendering...)`
@@ -9,6 +24,7 @@ Personal portfolio project for 2020
 - **Netlify** `(Continuous Integration / Deployment)`
 - **Tailwind** `(CSS Framework)`
 - **GSAP** `(2D / 3D animations)`
+- **THREEJS** `(3D library)`
 - **CurtainsJS** `(WebGL animations)`
 
 ## Infos / Inspirations / Tools
@@ -46,6 +62,6 @@ Personal portfolio project for 2020
 - [Headless WP Starter](https://github.com/postlight/headless-wp-starter) `(Big advanced React WP Headless starter 💡)`
 
 **Tools**
-- [Webdesign](https://www.figma.com/files/team/822163543758455023/Les-Pilotins)
-- [Design Moodboard](https://niice.co/boards/6a3770e03d503d221dbfe93f90b8475a)
 - [Storybook JS](https://storybook.js.org/) `(To visualize & test Vue components in an isolated environment)`
+</details>
+
