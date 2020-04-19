@@ -2,7 +2,7 @@
 Personal portfolio project for 2020
 
 <details>
-<summary><strong>DESIGN</strong></summary>
+<summary><strong>DESIGN (Art + Front)</strong></summary>
 
 **Inspiration**
 - **[Richard Mattka](http://richardmattka.com)** `(Dark UI / 3D object / Minimal)`
@@ -40,7 +40,7 @@ Personal portfolio project for 2020
 </details>
 
 <details>
-<summary><strong>DEV</strong></summary>
+<summary><strong>DEV (Front + Back)</strong></summary>
   
 ## Stack
 - **VueJS 2 (or 3?)** `(Layouts, components, custom elements, events, navigation...)`
