@@ -4,6 +4,7 @@ Personal portfolio project for 2020
 <details>
 <summary><strong>DESIGN (Art + Front)</strong></summary>
 
+## Infos / Inspirations / Tools
 **Inspiration**
 - **[Richard Mattka](http://richardmattka.com)** `(Dark UI / 3D object / Minimal)`
 - **[Garden Eight](https://garden-eight.com/)** `(Dark UI / 3D object / Minimal)`
