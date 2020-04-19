@@ -14,6 +14,9 @@ Personal portfolio project for 2020
 - **[Victor Work](https://victor.work/)** `(Native Smooth scroll / Colors / WebGL image effects)`
 - **[Igor Mahr](https://igma.im/)** `(Micro-anims UI / Cursor deformation / Layout)`
 - **[Phoenix Cool](https://web.archive.org/web/20190619180926/https://phoenix.cool/)** `(Micro-anims UI / Easter Eggs ❤)`
+- **[Ferenc Almasi](https://allma.si)** `(Space / Minimal)`
+- **[Max Bock](https://mxb.dev/notes/)** `(Minimal / Webmentions / Blog style)`
+- **[Daniel Velasquez](https://velasquezdaniel.com/)** `(Minimal / Blog style / Demo as decoration of the article)`
 - **[Adrien Lamy](https://adrienlamy.fr/)** `(Humor-Derp Avatar / Easter Eggs ❤)`
 - **[Adrien Lamy's Lab](https://lab.adrienlamy.fr/)** `(Humor-Derp / Doggo Avatar / Easter Eggs ❤)`
 
