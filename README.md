@@ -11,7 +11,7 @@ Personal portfolio project for 2020
 - **[Clément Roche](https://www.clementroche.dev/)** `(3D Projects Labs Cube)`
 - **[WeCargo](https://www.wecargo.be/)** `(Prog Enhanc. / WebGL on DOM Elements / Nice anims / Check post)`
 - **[Victor Work](https://victor.work/)** `(Native Smooth scroll / Colors / WebGL image effects)`
-- ****[Igor Mahr](https://igma.im/)** `(Micro-anims UI / Cursor deformation / Layout)`
+- **[Igor Mahr](https://igma.im/)** `(Micro-anims UI / Cursor deformation / Layout)`
 - **[Phoenix Cool](https://web.archive.org/web/20190619180926/https://phoenix.cool/)** `(Micro-anims UI / Easter Eggs ❤)`
 
 **Repos**
