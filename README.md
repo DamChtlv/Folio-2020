@@ -18,6 +18,7 @@ Personal portfolio project for 2020
 - **[Max Bock](https://mxb.dev/notes/)** `(Minimal / Webmentions / Blog style)`
 - **[Daniel Velasquez](https://velasquezdaniel.com/)** `(Minimal / Blog style / Demo as decoration of the article)`
 - **[Adrien Lamy](https://adrienlamy.fr/)** `(Humor-Derp Avatar / Easter Eggs ❤)`
+- **[Florian Monfrini](https://florianmonfrini.com/)** `(Big font / Konami indicator / WebGL images ❤)`
 - **[Adrien Lamy's Lab](https://lab.adrienlamy.fr/)** `(Humor-Derp / Doggo Avatar / Easter Eggs ❤)`
 
 **Repos**
