@@ -23,6 +23,7 @@ Personal portfolio project for 2020
 
 **Repos**
 - **[THREEJS Modern Starter](https://github.com/marcofugaro/threejs-modern-app)** `(🚀)`
+- **[Reticool](https://shshaw.github.io/reticool/)** `(JS Cursor library)`
 
 **Posts**
 - **[WebGL Slider + Wind / Cloth effect](https://tympanus.net/Tutorials/3DClothSlideshow/)** `(Codrops ❤)`
