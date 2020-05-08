@@ -6,6 +6,7 @@ Personal portfolio project for 2020
 
 ## Infos / Inspirations / Tools
 **Inspiration**
+- **[Guillaume Gouessan](https://guillaumegouessan.com)** `(3D Nav Scene + Easter eggs ❤)`
 - **[Richard Mattka](http://richardmattka.com)** `(Dark UI / Minimal / 3D shader evolving on navigation)`
 - **[Garden Eight](https://garden-eight.com/)** `(Dark UI / 3D object / Minimal)`
 - **[Hey Cusp](https://heycusp.com/)** `(Text anims / Infinite Menu scroll / Image effects)`
