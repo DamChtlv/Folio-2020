@@ -66,6 +66,7 @@ Personal portfolio project for 2020
 - **[VueJS - Docs](https://fr.vuejs.org/v2/guide/)**
 - **[VueJS - Videos](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance)** `(Segmented)`
 - **[VueJS - Big complete video](https://www.youtube.com/watch?v=4deVCNJq3qc)**
+- **[VueJS 3 - Demo playground](https://github.com/blacksonic/vue-3-playground)**
 - **[NuxtJS - Docs](https://fr.nuxtjs.org/guide#nuxt-js-qu-est-ce-que-c-est-)**
 - **[NuxtJS - Videos](https://vueschool.io/lessons/what-is-nuxtjs)**
 
