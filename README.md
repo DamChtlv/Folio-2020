@@ -22,6 +22,8 @@ Personal portfolio project for 2020
 - **[Florian Monfrini](https://florianmonfrini.com/)** `(Big font / Konami indicator / WebGL images ❤)`
 - **[Adrien Lamy's Lab](https://lab.adrienlamy.fr/)** `(Humor-Derp / Doggo Avatar / Easter Eggs ❤)`
 - **[Console Img](https://defaced.dev/web/the-buggiest-site-on-the-web/)** `(Console easter egg ❤)`
+- **[Thibaut Foussard](https://thibautfoussard.com/)** `(3D Blob / Cursor / Multi-canvas)`
+- **[Thibaut Foussard's Lab](https://projects.thibautfoussard.com/lostinspace/)** `(Space 3D experiment)`
 
 **Repos**
 - **[THREEJS Modern Starter](https://github.com/marcofugaro/threejs-modern-app)** `(🚀)`
