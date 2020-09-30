@@ -13,7 +13,7 @@
 import SiteLogo from "@/components/SiteLogo.vue";
 import siteConfig from "../siteConfig";
 
-const siteUrl   = siteConfig.siteURL;
+const siteUrl = siteConfig.siteURL;
 
 export default {
   components: {
@@ -27,7 +27,6 @@ export default {
     },
     cleanMenuItems() {
         return this.menuItems.map(menuItem => {
-            console.log(siteUrl);
             return {
                 url: menuItem.url.replace(siteUrl, ''),
                 title: menuItem.title

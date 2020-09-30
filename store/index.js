@@ -56,7 +56,8 @@ export const actions = {
                 `${postsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!posts) return;
+            if (!posts || typeof posts !== 'object')
+                return;
 
             posts = posts
                 .filter(el => el.status === "publish")
@@ -85,7 +86,8 @@ export const actions = {
                 `${pagesAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!pages) return;
+            if (!pages || typeof pages !== 'object')
+                return;
 
             pages = pages
                 .filter(el => el.status === "publish")
@@ -114,7 +116,8 @@ export const actions = {
                 `${experimentsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!experiments) return;
+            if (!experiments || typeof experiments !== 'object')
+                return;
 
             experiments = experiments
                 .filter(el => el.status === "publish")
@@ -143,7 +146,8 @@ export const actions = {
                 `${marqueesAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!marquees) return;
+            if (!marquees || typeof marquees !== 'object')
+                return;
 
             marquees = marquees
                 .filter(el => el.status === "publish")
@@ -172,7 +176,8 @@ export const actions = {
                 `${projectsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!projects) return;
+            if (!projects || typeof projects !== 'object')
+                return;
 
             projects = projects
                 .filter(el => el.status === "publish")
@@ -201,7 +206,8 @@ export const actions = {
                 `${menuItemsAPI}`
             ).then(res => res.json())
 
-            if (!menu) return;
+            if (!menu || typeof menu !== 'object')
+                return;
 
             let menuItems = menu.items;
             if (!menuItems) return;
