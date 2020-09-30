@@ -1,16 +1,19 @@
 <template>
-  <site-nav>
+  <nav>
     <site-logo></site-logo>
     <ul>
       <li v-for="menuItem in cleanMenuItems" :key="menuItem.url">
         <nuxt-link :to="menuItem.url">{{ menuItem.title }}</nuxt-link>
       </li>
     </ul>
-  </site-nav>
+  </nav>
 </template>
 
 <script>
 import SiteLogo from "@/components/SiteLogo.vue";
+import siteConfig from "../siteConfig";
+
+const siteUrl   = siteConfig.siteURL;
 
 export default {
   components: {
@@ -24,8 +27,9 @@ export default {
     },
     cleanMenuItems() {
         return this.menuItems.map(menuItem => {
+            console.log(siteUrl);
             return {
-                url: menuItem.url.replace('http://wp.dam.cht.lv', ''),
+                url: menuItem.url.replace(siteUrl, ''),
                 title: menuItem.title
             };
         });
@@ -45,9 +49,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-site-nav {
-  align-items: center;
+nav {
   display: flex;
+  align-items: center;
   height: 100%;
   width: 100%;
   background: #000;
