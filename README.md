@@ -6,8 +6,8 @@ Personal portfolio project for 2020
 
 ## Infos / Inspirations / Tools
 **Inspiration**
-- **[Guillaume Gouessan](https://guillaumegouessan.com)** `(3D Nav Scene + Easter eggs ❤)`
-- **[Richard Mattka](http://richardmattka.com)** `(Dark UI / Minimal / 3D shader evolving on navigation)`
+- **[Guillaume Gouessan](https://guillaumegouessan.com)** `(3D SiteNav Scene + Easter eggs ❤)`
+- **[Richard Mattka](http://richardmattka.com)** `(Dark UI / Minimal / 3D shader evolving on site-navigation)`
 - **[Garden Eight](https://garden-eight.com/)** `(Dark UI / 3D object / Minimal)`
 - **[Hey Cusp](https://heycusp.com/)** `(Text anims / Infinite Menu scroll / Image effects)`
 - **[Clément Roche](https://www.clementroche.dev/)** `(3D Projects Labs Cube)`
@@ -51,9 +51,9 @@ Personal portfolio project for 2020
 
 <details>
 <summary><strong>DEV (Front + Back)</strong></summary>
-  
+
 ## Stack
-- **VueJS 2 (or 3?)** `(Layouts, components, custom elements, events, navigation...)`
+- **VueJS 2 (or 3?)** `(Layouts, components, custom elements, events, site-navigation...)`
 - **NuxtJS** `(Auto-routing, server-side rendering...)`
 - **WordPress** `(Headless CMS)`
 - **WP Nuxt** `(WP REST API node module wrapper)`
@@ -101,4 +101,3 @@ Personal portfolio project for 2020
 **Tools**
 - **[Storybook JS](https://storybook.js.org/)** `(To visualize & test Vue components in an isolated environment)`
 </details>
-
