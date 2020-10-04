@@ -1,29 +1,20 @@
 <template>
-  <PostSingle :post="post" />
+  <article class="experiment single">
+    <h1>{{ post.title.rendered }}</h1>
+    <small class="date">{{ post.date | dateformat }}</small>
+    <section v-html="post.content.rendered"></section>
+  </article>
 </template>
 
 <script>
-import PostSingle from "~/components/PostSingle.vue";
-
 export default {
-
-  // Get data
-  // @https://github.com/nuxt/nuxt.js/issues/1693
-  fetch ({ app, store, params }) {
-    return store.dispatch("getPosts");
-  },
-
-  components: {
-    PostSingle,
-  },
-
   // Prepare & format data
   computed: {
     posts() {
-      return this.$store.state.posts;
+      return this.$store.state.experiments;
     },
     post() {
-      let post = this.posts.find((el) => el.slug === this.slug);
+      let post = this.experiments.find((el) => el.slug === this.slug);
       return post;
     },
   },
@@ -33,6 +24,12 @@ export default {
     return {
       slug: this.$route.params.slug,
     };
+  },
+
+  // Get needed data
+  created() {
+    // Get "Experiments" data
+    this.$store.dispatch("getExperiments");
   },
 };
 </script>

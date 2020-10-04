@@ -1,5 +1,6 @@
 <template>
   <svg
+    id="logo"
     :height="height"
     :width="width"
     :fill="fill"

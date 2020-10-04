@@ -16,32 +16,28 @@ export const state = () => ({
     marquees: [],
     projects: [],
     menuItems: []
-    // tags: []
 })
 
 // Update Data helpers
 export const mutations = {
-    updatePosts: (state, posts) => {
-        state.posts = posts
+    updatePosts: (state, data) => {
+        state.posts = data
     },
-    updatePages: (state, pages) => {
-        state.pages = pages
+    updatePages: (state, data) => {
+        state.pages = data
     },
-    updateExperiments: (state, experiments) => {
-        state.experiments = experiments
+    updateExperiments: (state, data) => {
+        state.experiments = data
     },
-    updateMarquees: (state, marquees) => {
-        state.marquees = marquees
+    updateMarquees: (state, data) => {
+        state.marquees = data
     },
-    updateProjects: (state, projects) => {
-        state.projects = projects
+    updateProjects: (state, data) => {
+        state.projects = data
     },
-    updateMenuItems: (state, menuItems) => {
-        state.menuItems = menuItems
+    updateMenuItems: (state, data) => {
+        state.menuItems = data
     }
-    // updateTags: (state, tags) => {
-    //     state.tags = tags
-    // }
 }
 
 // Get Data helpers
@@ -56,18 +52,17 @@ export const actions = {
                 `${postsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!posts || typeof posts !== 'object')
+            if (!posts || typeof posts !== 'object' || posts.code === 'rest_no_route')
                 return;
 
             posts = posts
                 .filter(el => el.status === "publish")
-                .map(({ id, slug, title, excerpt, date, tags, content }) => ({
+                .map(({ id, slug, title, excerpt, date, content }) => ({
                     id,
                     slug,
                     title,
                     excerpt,
                     date,
-                    tags,
                     content
                 }))
 
@@ -86,18 +81,17 @@ export const actions = {
                 `${pagesAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!pages || typeof pages !== 'object')
+            if (!pages || typeof pages !== 'object' || pages.code === 'rest_no_route')
                 return;
 
             pages = pages
                 .filter(el => el.status === "publish")
-                .map(({ id, slug, title, excerpt, date, tags, content }) => ({
+                .map(({ id, slug, title, excerpt, date, content }) => ({
                     id,
                     slug,
                     title,
                     excerpt,
                     date,
-                    tags,
                     content
                 }))
 
@@ -116,18 +110,17 @@ export const actions = {
                 `${experimentsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!experiments || typeof experiments !== 'object')
+            if (!experiments || typeof experiments !== 'object' || experiments.code === 'rest_no_route')
                 return;
 
             experiments = experiments
                 .filter(el => el.status === "publish")
-                .map(({ id, slug, title, excerpt, date, tags, content }) => ({
+                .map(({ id, slug, title, excerpt, date, content }) => ({
                     id,
                     slug,
                     title,
                     excerpt,
                     date,
-                    tags,
                     content
                 }))
 
@@ -146,18 +139,17 @@ export const actions = {
                 `${marqueesAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!marquees || typeof marquees !== 'object')
+            if (!marquees || typeof marquees !== 'object' || marquees.code === 'rest_no_route')
                 return;
 
             marquees = marquees
                 .filter(el => el.status === "publish")
-                .map(({ id, slug, title, excerpt, date, tags, content }) => ({
+                .map(({ id, slug, title, excerpt, date, content }) => ({
                     id,
                     slug,
                     title,
                     excerpt,
                     date,
-                    tags,
                     content
                 }))
 
@@ -176,18 +168,17 @@ export const actions = {
                 `${projectsAPI}?page=1&per_page=20&_embed=1`
             ).then(res => res.json())
 
-            if (!projects || typeof projects !== 'object')
+            if (!projects || typeof projects !== 'object' || projects.code === 'rest_no_route')
                 return;
 
             projects = projects
                 .filter(el => el.status === "publish")
-                .map(({ id, slug, title, excerpt, date, tags, content }) => ({
+                .map(({ id, slug, title, excerpt, date, content }) => ({
                     id,
                     slug,
                     title,
                     excerpt,
                     date,
-                    tags,
                     content
                 }))
 
@@ -199,7 +190,7 @@ export const actions = {
 
     // Terms: Menu Items
     async getMenuItems({ state, commit, dispatch }) {
-        if (state.menuItems.length) return
+        // if (state.menuItems.length) return
 
         try {
             let menu = await fetch(
@@ -226,30 +217,4 @@ export const actions = {
             console.log(err)
         }
     }
-
-    // Taxo: Tags
-    // async getTags({ state, commit }) {
-    //     if (state.tags.length) return
-
-    //     let allTags = state.posts.reduce((acc, item) => {
-    //         return acc.concat(item.tags)
-    //     }, [])
-    //     allTags = allTags.join()
-
-    //     try {
-    //         let tags = await fetch(
-    //             `${siteAPI}tags?page=1&per_page=40&include=${allTags}`
-    //         ).then(res => res.json())
-
-    //         tags = tags.map(({ id, name }) => ({
-    //             id,
-    //             name
-    //         }))
-
-    //         commit("updateTags", tags)
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
 }

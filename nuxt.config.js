@@ -4,7 +4,7 @@ import siteConfig from "./siteConfig"
 const siteAPI   = siteConfig.api.site;
 const postTypes = siteConfig.api.postTypes;
 
-let dynamicRoutes = () => {
+const dynamicRoutes = () => {
 
     let routes = [];
     postTypes.map(postType => {
@@ -12,7 +12,9 @@ let dynamicRoutes = () => {
         const postTypePrefix    = postType.prefix;
         const postTypeAPI       = postType.api;
         const postTypeRoutes    = axios
-            .get(`${siteAPI}${postTypeAPI}`)
+            .get(`${siteAPI}${postTypeAPI}`, {
+                params: { orderby: 'date', per_page: 1000000, _embed: null }
+            })
             .then(res => {
                 return res.data.map(post => `${postTypePrefix}${post.slug}`)
             })
@@ -27,7 +29,7 @@ let dynamicRoutes = () => {
 export default {
 
     // Rendering mode
-    mode: "universal",
+    // mode: "universal",
 
     // Headers of the page
     head: {
@@ -42,12 +44,11 @@ export default {
             }
         ],
         link: [
-            { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-            {
-                rel: "stylesheet",
-                href:
-                    "https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap"
-            }
+            { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+            // ,{
+            //     rel: "stylesheet",
+            //     href: "https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap"
+            // }
         ]
     },
 
@@ -59,19 +60,14 @@ export default {
 
     // Plugins to load before mounting the App
     plugins: [
-        "~/plugins/posts.server.js",
-        "~/plugins/pages.server.js",
-        "~/plugins/experiments.server.js",
-        "~/plugins/marquees.server.js",
-        "~/plugins/projects.server.js",
-        "~/plugins/menuItems.server.js",
-        // "~/plugins/tags.server.js",
         "~/plugins/dateformat.js"
     ],
 
     generate: {
         routes: dynamicRoutes
     },
+
+    modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
     // Nuxt.js dev-modules
     buildModules: [],
