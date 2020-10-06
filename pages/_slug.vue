@@ -6,11 +6,10 @@
 import PostSingle from "~/components/PostSingle.vue";
 
 export default {
-
   // Get data
   // @https://github.com/nuxt/nuxt.js/issues/1693
-  fetch ({ app, store, params }) {
-    return store.dispatch("getPosts");
+  fetch({ app, store, params }) {
+    return store.dispatch("getPages");
   },
 
   components: {
@@ -27,10 +26,14 @@ export default {
   // Prepare & format data
   computed: {
     posts() {
-      return this.$store.state.posts;
+      return this.$store.state.pages;
     },
     post() {
       let post = this.posts.find((el) => el.slug === this.slug);
+
+      // TODO: Need to dig how to get ACFE archive page option
+      console.log(this.posts);
+      console.log(this.slug);
       return post;
     },
   },
