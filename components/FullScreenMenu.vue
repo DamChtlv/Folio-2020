@@ -17,12 +17,19 @@ export default {
 
     // Get data
     // @https://github.com/nuxt/nuxt.js/issues/1693
-    fetch({ app, store, params }) {
-        return store.dispatch("getMenuItems");
-    },
+    // middleware({ store, redirect }) {
+    //     console.log(store);
+    //     return store.dispatch("getMenuItems");
+    // },
     // async asyncdata({ app, store, params }) {
     //     await store.dispatch("getMenuItems");
     // },
+
+    // Get needed data
+    created() {
+        // Get "menuItems" data
+        this.$store.dispatch("getMenuItems");
+    },
 
     // props: {
     //     menuItems: Array,

@@ -190,7 +190,7 @@ export const actions = {
 
     // Terms: Menu Items
     async getMenuItems({ state, commit, dispatch }) {
-        // if (state.menuItems.length) return
+        if (state.menuItems.length) return
 
         try {
             let menu = await fetch(
