@@ -1,10 +1,15 @@
 # Folio-2020
 Personal portfolio project for 2020
 
+## Todo
+- [ ] Create components based on [ACF Flexible layouts](https://medium.com/propeller-engine-room/nuxt-js-a-different-way-to-vue-wordpress-bb3d5655db70)
+- [ ] Use [GraphQL](https://cunisinc.com/creating-websites-fast-with-vue-js-and-gridsome/) instead of REST?
+
+## Ressources  
 <details>
 <summary><strong>DESIGN (Art + Front)</strong></summary>
 
-## Infos / Inspirations / Tools
+### Infos / Inspirations / Tools
 **Inspiration**
 - **[Guillaume Gouessan](https://guillaumegouessan.com)** `(3D SiteNav Scene + Easter eggs ❤)`
 - **[Richard Mattka](http://richardmattka.com)** `(Dark UI / Minimal / 3D shader evolving on site-navigation)`
@@ -52,7 +57,7 @@ Personal portfolio project for 2020
 <details>
 <summary><strong>DEV (Front + Back)</strong></summary>
 
-## Stack
+### Stack
 - **VueJS 2 (or 3?)** `(Layouts, components, custom elements, events, site-navigation...)`
 - **NuxtJS** `(Auto-routing, server-side rendering...)`
 - **WordPress** `(Headless CMS)`
@@ -63,7 +68,7 @@ Personal portfolio project for 2020
 - **THREEJS** `(3D library)`
 - **CurtainsJS** `(WebGL animations)`
 
-## Infos / Inspirations / Tools
+### Infos / Inspirations / Tools
 **Learning**
 - **[VueJS - Docs](https://fr.vuejs.org/v2/guide/)**
 - **[VueJS - Videos](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance)** `(Segmented)`
