@@ -21,22 +21,73 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+// Document
 :root {
   --white: #fff;
   --black: #000;
-  --red: #ff473e;
-  --dark: #8b919a;
-  --dark200: #f5f5f5;
-  --dark300: #dcdfe4;
-  --dark400: #8b919a;
-  --dark500: #606875;
-  --dark600: #303844;
-  --dark700: #0f121d;
+  --grey: #8b919a;
+  --grey200: #f5f5f5;
+  --grey300: #dcdfe4;
+  --grey400: #8b919a;
+  --grey500: #606875;
+  --grey600: #303844;
+  --grey700: #0f121d;
+  --primary: #ff473e;
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  --font-primary: "Formula Condensed";
+  --font-base: "Inter-var-x";
+  --font-primary: "fc";
+  --text-xl: 3vh;
+  --text-2xl: 4.5vh;
+  --text-3xl: 6vh;
+  --text-4xl: 7.5vh;
+}
+
+// Fonts
+@font-face {
+  font-family: 'Inter-var-x';
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+  font-display: swap;
+  src: url('~assets/fonts/Inter.var.woff2') format('woff2 supports variations'),
+       url('~assets/fonts/Inter.var.woff2') format('woff2-variations');
+}
+@font-face {
+	font-family: 'fc';
+	font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+	src: url('~assets/fonts/FC-Ultralight.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'fc';
+	font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+	src: url('~assets/fonts/FC-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'fc';
+	font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+	src: url('~assets/fonts/FC-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'fc';
+	font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('~assets/fonts/FC-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'fc';
+	font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+	src: url('~assets/fonts/FC-Black.woff2') format('woff2');
 }
 
 *,
@@ -47,11 +98,11 @@ export default {
 }
 
 html {
-  color: var(--dark700, #000);
+  color: var(--grey200, #000);
   font-size: 18px;
   word-spacing: 1px;
   font-family: var(
-    --font-primary,
+    --font-base,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -64,7 +115,7 @@ html {
     "Segoe UI Symbol"
   );
   box-sizing: border-box;
-  background-color: var(--white, #fff);
+  background-color: var(--grey700, #fff);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
@@ -105,7 +156,7 @@ video {
 }
 
 small {
-  color: #9d5615;
+  color: var(--primary);
 }
 
 pre,
@@ -115,7 +166,7 @@ code {
   white-space: -pre-wrap; /* Opera 4-6 */
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
-  background: #eee;
+  background: var(--grey200);
   border-radius: 4px;
 }
 
@@ -130,5 +181,19 @@ code {
 
 p {
   margin: 15px 0 20px;
+}
+
+a {
+    color: var(--grey200);
+    text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 30px;
+  }
 }
 </style>
