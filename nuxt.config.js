@@ -31,6 +31,11 @@ export default {
     // Rendering mode
     // mode: "universal",
 
+    // css: [
+    //     // Fonts
+    //     '~assets/css/fonts.css',
+    // ],
+
     // Headers of the page
     head: {
         title: process.env.npm_package_name || "",
@@ -77,5 +82,12 @@ export default {
 
         // You can extend webpack config here
         extend(config, ctx) { }
+    },
+
+    vue: {
+        config: {
+            productionTip: true,
+            devtools: true,
+        }
     }
 }
