@@ -2,7 +2,7 @@
 Personal portfolio project for 2020
 
 ## Todo
-- [ ] Create a model example of **siteConfig.js** *(siteConfig.example.js)*
+- [x] Create a model example of **siteConfig.js** *(siteConfig.example.js)*
 - [ ] Create **Vue Components** based on [ACF Flexible layouts](https://medium.com/propeller-engine-room/nuxt-js-a-different-way-to-vue-wordpress-bb3d5655db70)
 - [ ] Use [GraphQL](https://cunisinc.com/creating-websites-fast-with-vue-js-and-gridsome/) instead of **REST**?
 
