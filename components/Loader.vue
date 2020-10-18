@@ -53,17 +53,18 @@ export default {
 
 <style lang="scss">
 #loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 9993;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--white, #fff);
     font-size: 3vw;
+    font-family: var(--font-primary);
     background: var(--dark700, #0F121D);
     overflow: hidden;
     pointer-events: none;

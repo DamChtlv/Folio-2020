@@ -54,7 +54,7 @@ export default {
                     introEl.appendChild(introDotEl)
                     homeIntroTL
                         .to(introDotEl, {duration: 0, position: 'absolute', top: introDotPos.top, left: introDotPos.left})
-                        .to(introDotEl, {ease: 'expo.inOut', left: '3%', top: '2%'})
+                        .to(introDotEl, {ease: 'expo.inOut', left: '2%', top: '1%'})
                         .to(introDotEl, {autoAlpha: 0})
                         .to(logoEl, {autoAlpha: 1})
                         .to(introEl, {autoAlpha: 0}, '<')
@@ -74,17 +74,18 @@ export default {
 
 <style lang="scss">
 #intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9992;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9992;
+    height: 100%;
+    width: 100%;
     color: var(--white, #fff);
     font-size: 3vw;
+    font-family: var(--font-primary);
     background: var(--dark700, #0F121D);
     overflow: hidden;
     pointer-events: none;

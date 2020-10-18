@@ -1,5 +1,6 @@
 <template>
     <nav id="fullscreen-menu">
+        <div id="fullscreen-menu-bg"></div>
         <ul>
             <li v-for="menuItem in cleanMenuItems" :key="menuItem.url">
                 <nuxt-link :to="menuItem.url">{{ menuItem.title }}</nuxt-link>
@@ -51,16 +52,89 @@ export default {
             return this.menuItems;
         },
     },
+
+    mounted() {
+        const comp = this;
+        const winH = window.innerHeight;
+        const winL = window.innerWidth;
+        const menuEl = document.getElementById('fullscreen-menu');
+        const bgEl = document.getElementById('fullscreen-menu-bg');
+        const logoEl = document.getElementById('logo');
+
+        document.addEventListener('mousemove', function(ev) {
+            const x = ev.clientX;
+            const y = ev.clientY;
+            const menuIsActive = menuEl.classList.contains('active');
+
+            if (menuIsActive) {
+                return;
+            }
+
+            if (x < winH / 10 && y < winL / 10) {
+                bgEl.style.setProperty('--circle-size', '66vh');
+            } else if (x < winH / 4 && y < winL / 4) {
+                bgEl.style.setProperty('--circle-size', '33vh');
+            } else {
+                bgEl.style.setProperty('--circle-size', '0vh');
+            }
+
+        });
+
+        logoEl.addEventListener('click', function(ev) {
+            menuEl.classList.toggle('active');
+            bgEl.style.setProperty('--circle-size', '500vh');
+        });
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-ul {
-  padding-left: 0;
+#fullscreen-menu-bg {
+    --circle-size: 0vh;
 
-  li {
-    display: inline-block;
-    margin-right: 30px;
-  }
+    position: fixed;
+    top: calc(-.5 * var(--circle-size));
+    left: calc(-.5 * var(--circle-size));
+    width: var(--circle-size);
+    height: var(--circle-size);
+    opacity: 1;
+    border-radius: 100%;
+    background: var(--grey200);
+    transition: all 0.3s ease 0s;
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    color: var(--grey700);
+    font-size: 6.5vw;
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 16.5vw;
+    background: var(--grey200);
+    opacity: 0;
+    pointer-events: none;
+}
+
+li {
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+a {
+    color: var(--grey700);
+
+    &:hover {
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--grey700);
+    }
 }
 </style>
