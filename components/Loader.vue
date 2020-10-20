@@ -2,13 +2,21 @@
   <div id="loader">
       <p id="loading-text">
           <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
+          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
       </p>
   </div>
 </template>
 
 <script>
-import charming from "charming"
-import gsap from "gsap"
+import charming from 'charming'
+import { gsap } from 'gsap'
 
 export default {
 
@@ -21,11 +29,12 @@ export default {
             const loadingTextEl = document.getElementById('loading-text');
             const loadingTextSentencesEl = document.querySelector('#loading-text span');
 
-            let numberOfLines = 8;
-            for (let index = 0; index < numberOfLines; index++) {
-                let clone = loadingTextSentencesEl.cloneNode(true);
-                loadingTextEl.appendChild(clone);
-            }
+            //? Faster to make html elements directly
+            // let numberOfLines = 8;
+            // for (let index = 0; index < numberOfLines; index++) {
+            //     let clone = loadingTextSentencesEl.cloneNode(true);
+            //     loadingTextEl.appendChild(clone);
+            // }
 
             let loaderTL = new gsap.timeline({
                 defaults: {duration: .7, ease: 'power3.out'}

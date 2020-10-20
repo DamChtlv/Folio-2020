@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import charming from "charming"
-import gsap from "gsap"
+import charming from 'charming'
+import { gsap } from 'gsap'
 
 export default {
 

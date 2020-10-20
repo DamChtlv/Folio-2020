@@ -42,40 +42,50 @@ export default {
     },
   },
   methods: {
-      mousePosition(event) {
-          let mousePos = {};
-            const x = event.pageX;
-            const y = event.pageY;
-            mousePos.x = x;
-            mousePos.y = y;
-          return mousePos;
-      },
-      changePupilPosition(x, y) {
-          const pupilEl = document.getElementById('pupil');
-          const pupilElPos = pupilEl.getBoundingClientRect();
-          let pupilElX = pupilElPos.left;
-          let pupilElY = pupilElPos.top;
-          pupilElX = x;
-          pupilElY = y;
-      }
+    mousePosition(event) {
+      let mousePos = {};
+      const x = event.pageX;
+      const y = event.pageY;
+      mousePos.x = x;
+      mousePos.y = y;
+      return mousePos;
+    },
+    changePupilPosition(x, y) {
+      const pupilEl = document.getElementById("pupil");
+      const pupilElPos = pupilEl.getBoundingClientRect();
+      let pupilElX = pupilElPos.left;
+      let pupilElY = pupilElPos.top;
+      pupilElX = x;
+      pupilElY = y;
+    },
   },
   mounted() {
-      var comp = this;
-      document.addEventListener('mousemove', function(event) {
-          const mouseCoords = comp.mousePosition(event)
-            comp.changePupilPosition(mouseCoords.x, mouseCoords.y)
-        }, true);
+    var comp = this;
+    window.addEventListener(
+      "mousemove",
+      function (event) {
+        const mouseCoords = comp.mousePosition(event);
+        comp.changePupilPosition(mouseCoords.x, mouseCoords.y);
+      },
+      true
+    );
   },
 };
 </script>
 
 <style lang="scss" scoped>
 svg {
-    position: absolute;
-    top: 3%;
-    left: 2%;
-    z-index: 9995;
-    vertical-align: middle;
-    mix-blend-mode: difference;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  z-index: 9995;
+  vertical-align: middle;
+  mix-blend-mode: difference;
+  cursor: pointer;
+  transition: transform 0.2s ease 0s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
 }
 </style>
