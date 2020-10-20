@@ -28,5 +28,6 @@ p {
     text-transform: uppercase;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    user-select: none;
 }
 </style>
