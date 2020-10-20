@@ -1,9 +1,12 @@
 <template>
     <nav id="fullscreen-menu">
         <div id="fullscreen-menu-bg"></div>
+        <!-- <svg id="fullscreen-menu-bg" width="25" height="25" viewBox="0 0 25 25">
+            <circle cx="12.5" cy="12.5" r="6.25"/>
+        </svg> -->
         <ul>
             <li v-for="menuItem in cleanMenuItems" :key="menuItem.url">
-                <nuxt-link :to="menuItem.url">{{ menuItem.title }}</nuxt-link>
+                <nuxt-link :to="menuItem.url" :data-text="menuItem.title">{{ menuItem.title }}</nuxt-link>
             </li>
         </ul>
     </nav>
@@ -61,11 +64,11 @@ export default {
         const bgEl = document.getElementById('fullscreen-menu-bg');
         const logoEl = document.getElementById('logo');
 
-        document.addEventListener('mousemove', function(ev) {
+        window.addEventListener('mousemove', function(ev) {
             const x = ev.clientX;
             const y = ev.clientY;
-            const menuIsActive = menuEl.classList.contains('active');
 
+            const menuIsActive = menuEl.classList.contains('active');
             if (menuIsActive) {
                 return;
             }
@@ -81,8 +84,12 @@ export default {
         });
 
         logoEl.addEventListener('click', function(ev) {
+            if (menuEl.classList.contains('active')) {
+                bgEl.style.setProperty('--circle-size', '66vh');
+            } else {
+                bgEl.style.setProperty('--circle-size', '500vh');
+            }
             menuEl.classList.toggle('active');
-            bgEl.style.setProperty('--circle-size', '500vh');
         });
     }
 }
@@ -101,6 +108,7 @@ export default {
     border-radius: 100%;
     background: var(--grey200);
     transition: all 0.3s ease 0s;
+    pointer-events: none;
 }
 
 ul {
@@ -114,12 +122,20 @@ ul {
     font-size: 6.5vw;
     font-family: var(--font-primary);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    // align-items: center;
+    // justify-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
     padding-left: 16.5vw;
     background: var(--grey200);
     opacity: 0;
     pointer-events: none;
+    transition: all 0.3s ease 0s;
+
+    .active & {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 li {
@@ -130,11 +146,17 @@ li {
 
 a {
     color: var(--grey700);
+    opacity: 1;
 
     &:hover {
-        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: var(--grey700);
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            transform: translate3d(-100%, 5%, 0);
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: var(--grey700);
+        }
     }
 }
 </style>

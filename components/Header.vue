@@ -28,13 +28,13 @@ header {
   padding: 1em 100px;
   background: transparent;
 
-  a {
-    opacity: 0.8;
+//   a {
+//     opacity: 0.8;
 
-    &:hover {
-      opacity: 1;
-    }
-  }
+//     &:hover {
+//       opacity: 1;
+//     }
+//   }
 }
 
 </style>
