@@ -1,42 +1,47 @@
 <template>
-  <main>
-    <PostArchive :posts="posts" />
-  </main>
+    <PostSingle :post="page" />
 </template>
 
 <script>
-import PostArchive from "~/components/PostArchive.vue"
+// import PostArchive from "~/components/PostArchive.vue"
+import PostSingle from "~/components/PostSingle.vue"
 
 export default {
 
   // Get data
-  // @https://github.com/nuxt/nuxt.js/issues/1693
   fetch ({ app, store, params }) {
-    return store.dispatch("getPosts");
+    return store.dispatch('getFrontPage');
   },
 
   // Declare components used
   components: {
-    PostArchive,
-  },
-
-  // Prepare & format data
-  computed: {
-    posts() {
-      return this.$store.state.posts;
-    },
+    PostSingle,
   },
 
   // Local data
   data() {
-    return {
-      activeClass: "active",
-    };
+    return {};
   },
+
+  // Prepare & format data
+  computed: {
+    page() {
+      return this.$store.state.page;
+    },
+  },
+
+  // Meta
+  head() {
+      return {
+        title: this.page.yoast_title,
+        meta: this.page.yoast_meta,
+      }
+    }
+
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 main {
     display: grid;
   grid-template-columns: 2fr 1fr;

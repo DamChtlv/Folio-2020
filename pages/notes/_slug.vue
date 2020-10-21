@@ -1,5 +1,5 @@
 <template>
-  <PostSingle :post="page" />
+  <PostSingle :post="note" />
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
 
   // Get data
   fetch({ app, store, params }) {
-    return store.dispatch('getPage', params.slug);
+    return store.dispatch('getNote', params.slug);
   },
 
   components: {
@@ -23,16 +23,17 @@ export default {
 
   // Prepare & format data
   computed: {
-    page() {
-      return this.$store.state.page[0];
+    note() {
+        const note = this.$store.state.note[0];
+      return note;
     },
   },
 
   // Meta
   head() {
       return {
-        title: this.page.yoast_title,
-        meta: this.page.yoast_meta,
+        title: this.note.yoast_title,
+        meta: this.note.yoast_meta,
       }
     }
 };

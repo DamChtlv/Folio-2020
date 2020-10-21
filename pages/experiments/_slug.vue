@@ -10,10 +10,10 @@
 export default {
   // Prepare & format data
   computed: {
-    posts() {
+    experiments() {
       return this.$store.state.experiments;
     },
-    post() {
+    experiment() {
       let post = this.experiments.find((el) => el.slug === this.slug);
       return post;
     },

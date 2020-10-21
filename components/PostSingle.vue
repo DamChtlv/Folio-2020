@@ -10,6 +10,9 @@
 export default {
     props: {
         post: Object,
+    },
+    mounted() {
+        // console.log(post);
     }
 }
 </script>

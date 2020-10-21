@@ -1,5 +1,5 @@
 <template>
-  <PostSingle :post="page" />
+  <PostSingle :post="project" />
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
 
   // Get data
   fetch({ app, store, params }) {
-    return store.dispatch('getPage', params.slug);
+    return store.dispatch('getProject', params.slug);
   },
 
   components: {
@@ -23,16 +23,17 @@ export default {
 
   // Prepare & format data
   computed: {
-    page() {
-      return this.$store.state.page[0];
+    project() {
+        const project = this.$store.state.project[0];
+      return project;
     },
   },
 
   // Meta
   head() {
       return {
-        title: this.page.yoast_title,
-        meta: this.page.yoast_meta,
+        title: this.project.yoast_title,
+        meta: this.project.yoast_meta,
       }
     }
 };

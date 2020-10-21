@@ -2,8 +2,8 @@
   <div id="app">
     <Header />
     <Nuxt />
-    <Loader />
-    <Intro />
+    <!-- <Loader />
+    <Intro /> -->
     <CustomCursor />
   </div>
 </template>
@@ -21,6 +21,12 @@ export default {
     Header,
     CustomCursor,
   },
+
+  // Get needed data
+  created() {
+    //   this.$store.dispatch('getPosts');
+    //   this.$store.dispatch('getPages');
+  }
 };
 </script>
 

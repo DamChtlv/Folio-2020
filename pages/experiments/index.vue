@@ -1,30 +1,34 @@
 <template>
-  <PostSingle :post="page" />
+    <PostArchive :posts="experiments" />
 </template>
 
 <script>
-import PostSingle from "~/components/PostSingle.vue";
+import PostArchive from "~/components/PostArchive.vue"
 
 export default {
 
   // Get data
-  fetch({ app, store, params }) {
-    return store.dispatch('getPage', params.slug);
+  fetch ({ app, store, params }) {
+    return store.dispatch('getExperiments');
   },
 
+  // Declare components used
   components: {
-    PostSingle,
+    PostArchive,
   },
 
-  // Store local data
+  // Local data
   data() {
     return {};
   },
 
   // Prepare & format data
   computed: {
+    experiments() {
+      return this.$store.state.experiments;
+    },
     page() {
-      return this.$store.state.page[0];
+      return this.$store.state.pages.filter((page) => page.slug == this.$route.params.slug);
     },
   },
 
@@ -35,6 +39,7 @@ export default {
         meta: this.page.yoast_meta,
       }
     }
+
 };
 </script>
 

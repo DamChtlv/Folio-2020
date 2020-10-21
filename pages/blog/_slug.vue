@@ -10,7 +10,7 @@ export default {
   // Get data
   // @https://github.com/nuxt/nuxt.js/issues/1693
   fetch ({ app, store, params }) {
-    return store.dispatch("getPosts");
+    return store.dispatch('getPost', params.slug);
   },
 
   components: {
@@ -19,21 +19,23 @@ export default {
 
   // Store local data
   data() {
-    return {
-      slug: this.$route.params.slug,
-    };
+    return {};
   },
 
   // Prepare & format data
   computed: {
-    posts() {
-      return this.$store.state.posts;
-    },
     post() {
-      let post = this.posts.find((el) => el.slug === this.slug);
-      return post;
+      return this.$store.state.post[0];
     },
   },
+
+  // Meta
+  head() {
+      return {
+        title: this.post.yoast_title,
+        meta: this.post.yoast_meta,
+      }
+    }
 };
 </script>
 

@@ -2,11 +2,11 @@
   <div class="posts">
     <article class="post" v-for="post in posts" :key="post.id">
       <h3>
-        <nuxt-link :to="`blog/${post.slug}`">{{ post.title.rendered }}</nuxt-link>
+        <nuxt-link :to="`${post.slug}`">{{ post.title.rendered }}</nuxt-link>
       </h3>
       <small>{{ post.date | dateformat }}</small>
       <div v-html="post.excerpt.rendered"></div>
-      <nuxt-link class="readmore" :to="`blog/${post.slug}`">
+      <nuxt-link class="readmore" :to="`${post.slug}`">
         Read more ⟶
       </nuxt-link>
     </article>
