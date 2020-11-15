@@ -1,5 +1,5 @@
 # Folio-2020
-Personal portfolio project for 2020
+✨ Personal portfolio project for 2020
 
 ## Todo
 - [x] Create a model example of **siteConfig.js** *(siteConfig.example.js)*
