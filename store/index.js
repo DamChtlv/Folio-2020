@@ -12,6 +12,7 @@ const menuItemsAPI = `${siteAPI}${siteConfig.api.menus.fullscreen}`;
 
 // Store Data
 export const state = () => ({
+    breadcrumb: 'Home',
     post: {},
     posts: [],
     note: {},
@@ -29,6 +30,9 @@ export const state = () => ({
 
 // Update Data helpers
 export const mutations = {
+    updateBreadcrumb: (state, data) => {
+        state.breadcrumb = data
+    },
     updatePost: (state, data) => {
         state.post = data
     },
@@ -72,6 +76,11 @@ export const mutations = {
 
 // Get Data helpers
 export const actions = {
+
+    // Post: Front page
+    async getBreadcrumb({ state, commit, dispatch }) {
+        return await state.breadcrumb;
+    },
 
     // Post: Front page
     async getFrontPage({ state, commit, dispatch }) {

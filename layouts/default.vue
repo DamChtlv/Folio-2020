@@ -5,6 +5,7 @@
     <!-- <Loader />
     <Intro /> -->
     <CustomCursor />
+    <InfoTextUI />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Loader from "~/components/Loader.vue";
 import Intro from "~/components/Intro.vue";
 import Header from "~/components/Header.vue";
 import CustomCursor from "~/components/CustomCursor.vue";
+import InfoTextUI from "~/components/InfoTextUI.vue";
 
 export default {
   components: {
@@ -20,90 +22,91 @@ export default {
     Intro,
     Header,
     CustomCursor,
+    InfoTextUI,
   },
 
   // Get needed data
   created() {
     //   this.$store.dispatch('getPosts');
     //   this.$store.dispatch('getPages');
-  }
+  },
 };
 </script>
 
 <style lang="scss">
 // Document
 :root {
-    --white: #fff;
-    --black: #000;
-    --grey: #8b919a;
-    --grey200: #f5f5f5;
-    --grey300: #dcdfe4;
-    --grey400: #8b919a;
-    --grey500: #606875;
-    --grey600: #303844;
-    --grey700: #0f121d;
-    --primary: #ff473e;
-    --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
-    --font-base: "Inter-var-x";
-    --font-primary: "fc";
-    --text-xl: 3vh;
-    --text-2xl: 4.5vh;
-    --text-3xl: 6vh;
-    --text-4xl: 7.5vh;
-    --cursor-stroke: #000;
-    --cursor-stroke-width: 1px;
+  --white: #fff;
+  --black: #000;
+  --grey: #8b919a;
+  --grey200: #f5f5f5;
+  --grey300: #dcdfe4;
+  --grey400: #8b919a;
+  --grey500: #606875;
+  --grey600: #303844;
+  --grey700: #0f121d;
+  --primary: #ff473e;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-base: "Inter-var-x";
+  --font-primary: "fc";
+  --text-xl: 3vh;
+  --text-2xl: 4.5vh;
+  --text-3xl: 6vh;
+  --text-4xl: 7.5vh;
+  --cursor-stroke: #000;
+  --cursor-stroke-width: 1px;
 }
 
 // Fonts
 @font-face {
-  font-family: 'Inter-var-x';
+  font-family: "Inter-var-x";
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
   font-display: swap;
-  src: url('~assets/fonts/Inter.var.woff2') format('woff2 supports variations'),
-       url('~assets/fonts/Inter.var.woff2') format('woff2-variations');
+  src: url("~assets/fonts/Inter.var.woff2") format("woff2 supports variations"),
+    url("~assets/fonts/Inter.var.woff2") format("woff2-variations");
 }
 @font-face {
-	font-family: 'fc';
-	font-weight: 100;
-    font-style: normal;
-    font-stretch: 1% 500%; /* Nécessaire pour Chrome */
-    font-display: swap;
-	src: url('~assets/fonts/FC-Ultralight.woff2') format('woff2');
+  font-family: "fc";
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: 1% 500%; /* Nécessaire pour Chrome */
+  font-display: swap;
+  src: url("~assets/fonts/FC-Ultralight.woff2") format("woff2");
 }
 @font-face {
-	font-family: 'fc';
-	font-weight: 300;
-    font-style: normal;
-    font-stretch: 1% 500%; /* Nécessaire pour Chrome */
-    font-display: swap;
-	src: url('~assets/fonts/FC-Light.woff2') format('woff2');
+  font-family: "fc";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: 1% 500%; /* Nécessaire pour Chrome */
+  font-display: swap;
+  src: url("~assets/fonts/FC-Light.woff2") format("woff2");
 }
 @font-face {
-	font-family: 'fc';
-	font-weight: 400;
-    font-style: normal;
-    font-stretch: 1% 500%; /* Nécessaire pour Chrome */
-    font-display: swap;
-	src: url('~assets/fonts/FC-Regular.woff2') format('woff2');
+  font-family: "fc";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: 1% 500%; /* Nécessaire pour Chrome */
+  font-display: swap;
+  src: url("~assets/fonts/FC-Regular.woff2") format("woff2");
 }
 @font-face {
-	font-family: 'fc';
-	font-weight: 700;
-    font-style: normal;
-    font-stretch: 1% 500%; /* Nécessaire pour Chrome */
-    font-display: swap;
-    src: url('~assets/fonts/FC-Bold.woff2') format('woff2');
+  font-family: "fc";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: 1% 500%; /* Nécessaire pour Chrome */
+  font-display: swap;
+  src: url("~assets/fonts/FC-Bold.woff2") format("woff2");
 }
 @font-face {
-	font-family: 'fc';
-	font-weight: 900;
-    font-style: normal;
-    font-stretch: 1% 500%; /* Nécessaire pour Chrome */
-    font-display: swap;
-	src: url('~assets/fonts/FC-Black.woff2') format('woff2');
+  font-family: "fc";
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: 1% 500%; /* Nécessaire pour Chrome */
+  font-display: swap;
+  src: url("~assets/fonts/FC-Black.woff2") format("woff2");
 }
 
 *,
@@ -138,8 +141,8 @@ html {
 }
 
 body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 #app {
@@ -163,7 +166,8 @@ h1 {
 }
 
 img {
-  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 video {
@@ -200,8 +204,8 @@ p {
 }
 
 a {
-    color: var(--grey200);
-    text-decoration: none;
+  color: var(--grey200);
+  text-decoration: none;
 }
 
 ul {

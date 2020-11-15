@@ -148,15 +148,15 @@ a {
     color: var(--grey700);
     opacity: 1;
 
-    &:hover {
-        &::after {
-            content: attr(data-text);
-            position: absolute;
-            transform: translate3d(-100%, 5%, 0);
-            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: var(--grey700);
-        }
-    }
+    // &:hover {
+    //     &::after {
+    //         content: attr(data-text);
+    //         position: absolute;
+    //         transform: translate3d(-100%, 5%, 0);
+    //         -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    //         -webkit-text-stroke-width: 1px;
+    //         -webkit-text-stroke-color: var(--grey700);
+    //     }
+    // }
 }
 </style>

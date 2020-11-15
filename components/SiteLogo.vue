@@ -1,11 +1,12 @@
 <template>
   <svg
     id="logo"
-    :height="height"
-    :width="width"
     fill="none"
     viewBox="0 0 31 33"
     xmlns="http://www.w3.org/2000/svg"
+    :height="height"
+    :width="width"
+    v-on:click="updateBreadcrumb"
   >
     <path
       id="eye"
@@ -27,6 +28,7 @@
 
 <script>
 export default {
+
   props: {
     height: {
       type: Number,
@@ -41,7 +43,9 @@ export default {
       default: "#fff",
     },
   },
+
   methods: {
+
     mousePosition(event) {
       let mousePos = {};
       const x = event.pageX;
@@ -50,6 +54,7 @@ export default {
       mousePos.y = y;
       return mousePos;
     },
+
     changePupilPosition(x, y) {
       const pupilEl = document.getElementById("pupil");
       const pupilElPos = pupilEl.getBoundingClientRect();
@@ -58,8 +63,15 @@ export default {
       pupilElX = x;
       pupilElY = y;
     },
+
+    updateBreadcrumb() {
+        // this.$store.state.breadcrumb = 'Menu';
+        this.$store.dispatch('updateBreadcrumb', 'Menu');
+    }
   },
+
   mounted() {
+
     var comp = this;
     window.addEventListener(
       "mousemove",
@@ -69,6 +81,7 @@ export default {
       },
       true
     );
+
   },
 };
 </script>

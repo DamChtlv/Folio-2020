@@ -1,16 +1,39 @@
 <template>
   <p>
-      {{ title }}
+      {{ breadcrumb }}
   </p>
 </template>
 
 <script>
 export default {
+
     data() {
         return {
-            title: 'Home'
+            breadcrumb: 'Home'
         }
-    }
+    },
+
+    async asyncData({ params, $http }) {
+      const breadcrumb = await this.$store.state.breadcrumb
+      return { breadcrumb }
+    },
+
+    // asyncdata() {
+    //     if (!this.$store.state.breadcrumb) {
+    //         // this.$store.dispatch('updateBreadcrumb', 'Home');
+    //     }
+    // },
+
+    // mounted() {
+    //     this.breadcrumb = this.$store.state.breadcrumb;
+    // }
+
+    // Prepare & format data
+    // computed: {
+    //     getBreadcrumb() {
+    //         this.breadcrumb = this.$store.state.breadcrumb;
+    //     },
+    // },
 }
 </script>
 
