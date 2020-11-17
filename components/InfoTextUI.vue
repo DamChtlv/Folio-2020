@@ -1,5 +1,5 @@
 <template>
-  <p v-html="infoText"></p>
+  <p id="infoText" v-html="infoText"></p>
 </template>
 
 <script>
@@ -157,7 +157,7 @@ export default {
       const spotifyUserInfo = this.fetchSpotifyUserInfo();
       spotifyUserInfo.then((response) => {
         this.infoTexts.push(
-          `🎶 <strong>${response.userInfoSongsPlayed} songs</strong> played in <strong>${response.userInfoRegistered}</strong> 😲`
+          `<a href="https://www.last.fm/user/damchtlv" target="_blank">🎶 <strong>${response.userInfoSongsPlayed} songs</strong> listened in <strong>${response.userInfoRegistered}</strong> 😌</a>`
         );
       });
     },
@@ -189,15 +189,37 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-p {
+<style lang="scss">
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#infoText {
   position: fixed;
   top: auto;
   left: 2%;
   bottom: 2%;
-  z-index: 9995;
+  z-index: 9990;
   vertical-align: middle;
   mix-blend-mode: difference;
   color: white;
+}
+
+.song-status {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    padding: 0 3px;
+    border-radius: 2px;
+    background-color: #5F5E5E;
+}
+
+.live {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: red;
+    animation: blinker 2s ease-out infinite;
 }
 </style>

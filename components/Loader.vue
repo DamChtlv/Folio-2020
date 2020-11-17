@@ -1,16 +1,18 @@
 <template>
   <div id="loader">
-      <p id="loading-text">
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-          <span data-text="I think it's loading. I think it's loading.">I think it's loading.</span>
-      </p>
+      <div id="loader-wrapper">
+        <p id="loading-text">
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+            <span data-text="I think it's loading. I think it's loading.">I think it's loading. I think it's loading. I think it's loading. I think it's loading.</span>
+        </p>
+      </div>
   </div>
 </template>
 
@@ -26,6 +28,7 @@ export default {
         launchLoader() {
 
             const loaderEl = document.getElementById('loader');
+            const loaderWrapperEl = document.getElementById('loader-wrapper');
             const loadingTextEl = document.getElementById('loading-text');
             const loadingTextSentencesEl = document.querySelector('#loading-text span');
 
@@ -41,7 +44,17 @@ export default {
             });
 
             loaderTL
-                .to(loadingTextEl, {duration: 1, opacity: 0, ease: 'expo.out', onComplete: function() {
+                // .set(opacity, 0)
+                .to(loaderWrapperEl, {
+                    // duration: 3,
+                    opacity: 1,
+                    // height: '100%',
+                    // width: '100%',
+                    ease: 'expo.out'
+                })
+
+            loaderTL
+                .to(loadingTextEl, {duration: 1, autoAlpha: 0, ease: 'expo.out', onComplete: function() {
                     // loadingTextEl.remove();
                     loaderEl.remove();
                     // loaderTL.clear();
@@ -62,15 +75,17 @@ export default {
 
 <style lang="scss">
 #loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    --text-transition: 25s;
+
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 9993;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9995;
     color: var(--white, #fff);
     font-size: 3vw;
     font-family: var(--font-primary);
@@ -80,43 +95,51 @@ export default {
     user-select: none;
 }
 
+#loader-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 #loading-text {
     display: flex;
     flex-direction: column;
     font-size: 7.5vw;
     line-height: .95em;
-    text-align: left;
     text-transform: uppercase;
-    transform: rotate(-7deg);
+    text-align: left;
+    width: 107%;
+    transform: translate(-2vw, -13vh) rotate(-7deg);
 
     span {
         display: block;
         white-space: nowrap;
         font-weight: bold;
-        animation: marquee-text-left 15s linear infinite;
+        animation: marquee-text-left var(--text-transition, 15s) linear infinite;
 
         &::before,
         &::after {
             content: attr(data-text);
             position: absolute;
             right: 100%;
-            padding: 0 21px;
+            padding: 0 1rem;
         }
 
         &::after {
-            left: 100%;
+            left: auto;
             right: auto;
         }
 
         &:nth-child(odd) {
-            animation: marquee-text-right 15s linear infinite;
+            animation: marquee-text-right var(--text-transition, 15s) linear infinite;
         }
 
         // &:nth-child(even) {
-            // color: var(--white);
-            // -webkit-text-fill-color: var(--dark700);
-            // -webkit-text-stroke-width: 2px;
-            // -webkit-text-stroke-color: var(--white);
+        //     color: var(--black);
+        //     -webkit-text-fill-color: var(--dark700);
+        //     -webkit-text-stroke-width: 2px;
+        //     -webkit-text-stroke-color: var(--white);
         // }
 
         &:nth-child(1),
@@ -147,7 +170,7 @@ export default {
 
 @keyframes marquee-text-left {
     0% {
-        transform: translate3d(100%,0,0);
+        transform: translate3d(50%,0,0);
     }
     100% {
         transform: translate3d(-100%,0,0);

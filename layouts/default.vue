@@ -49,8 +49,12 @@ export default {
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  --font-base: "Inter-var-x";
-  --font-primary: "fc";
+  --font-base: "Inter-var-x", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-primary: "fc", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   --text-xl: 3vh;
   --text-2xl: 4.5vh;
   --text-3xl: 6vh;
@@ -120,19 +124,7 @@ html {
   color: var(--grey200, #000);
   font-size: 18px;
   word-spacing: 1px;
-  font-family: var(
-    --font-base,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol"
-  );
+  font-family: var(--font-base);
   box-sizing: border-box;
   background-color: var(--grey700, #fff);
   -webkit-font-smoothing: antialiased;

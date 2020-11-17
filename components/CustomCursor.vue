@@ -1,6 +1,6 @@
 <template>
     <svg id="cursor" width="25" height="25" viewBox="0 0 25 25">
-        <circle class="cursor__inner" cx="12.5" cy="12.5" r="6.25"/>
+        <circle class="cursor__inner" cx="6.25" cy="6.25" r="6.25"/>
     </svg>
 </template>
 
