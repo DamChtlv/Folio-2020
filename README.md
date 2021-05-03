@@ -3,6 +3,7 @@
 
 ## Todo
 - [x] Create a model example of **siteConfig.js** *(siteConfig.example.js)*
+- [ ] Use `font-feature-settings: "aalt"` to enhance the font-family style [like here](https://www.bennett-tea.com/)
 - [ ] Create **Vue Components** based on [ACF Flexible layouts](https://medium.com/propeller-engine-room/nuxt-js-a-different-way-to-vue-wordpress-bb3d5655db70)
 - [ ] Use [GraphQL](https://cunisinc.com/creating-websites-fast-with-vue-js-and-gridsome/) instead of **REST**?
 
