@@ -13,6 +13,8 @@
 
 ### Infos / Inspirations / Tools
 **Inspiration**
+- **[Vincent Saisset](https://www.vincentsaisset.com)** `(Minimalist / Marquee)`
+- **[Mayerr](https://mayerr.com)** `(Font combo + colors + blurry lights bg WebGL)`
 - **[Guillaume Gouessan](https://guillaumegouessan.com)** `(3D SiteNav Scene + Easter eggs ❤)`
 - **[Richard Mattka](http://richardmattka.com)** `(Dark UI / Minimal / 3D shader evolving on site-navigation)`
 - **[Garden Eight](https://garden-eight.com/)** `(Dark UI / 3D object / Minimal)`
